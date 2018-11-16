@@ -1,0 +1,3 @@
+#1/bin/bash
+#This configs the raspberry image for inital setup
+qemu-system-arm -show-cursor -kernel ~/qemu_vms/kernel -cpu arm1176 -m 256 -M versatilepb -serial stdio -append "root=/dev/sda2panic=1 rootfstype=ext4 rw" -hda ~/qemu_vms/2017-04-10-raspbian-jessie.img -redir tcp:5022::22 -no-reboot
